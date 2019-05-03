@@ -1,0 +1,12 @@
+a : 200
+b : 400
+c : 200
+
+pointer = &a; //Pertama pointer diisi alamat memory variable a
+*pointer = 200; //pointer diisi nilai 200 sehingga nilai variable a ikut berubah karena pointer merujuk pada alamat variable a.
+
+pointer = &b; //Pertama pointer diisi alamat memory variable b
+*pointer = 400; //pointer diisi nilai 400 sehingga nilai variable b ikut berubah karena pointer merujuk pada alamat variable b.
+
+pointer = &c; //Pertama pointer diisi alamat memory variable c
+*pointer = *(&a); //kemudia pointer akan diisi nilai yang berada pada alamat dari variable a atau dengan kata lain akan diisi dengan nilai dari variable a. Secara otomatis nilai variable c akan sama dengan variable a.

@@ -1,0 +1,6 @@
+2) { 10 | next }----->{ 20 | next}---->{30 | next} ---|NULL
+
+3) Value dari data di contoh 2 adalah 30. Karena contoh2->data diassign dengan nilai 30 meskipun tidak secara langsung.
+
+contoh->next->next = contoh2
+contoh->next->next->data = 30;

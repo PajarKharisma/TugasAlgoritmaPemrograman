@@ -1,0 +1,19 @@
+1. Nilai variable a, b, dan c sebelum operasi : 
+a = 5 karena diberi nilai 5.
+b = 5 karena diberi nilai dari a.
+c = 5 karena variable c merupakan pointer dan diisi alamat memori dari a dan nilai pada alamat memori itu adalah 5.
+
+2. Nilai variable a, b, dan c setelah operasi :
+a : 15
+b : 10
+c : 15
+
+3. Meskipun variable a tidak mengalami operasi apapun, nilai a tetap berubah. Karena terjadi opeasi pada variable c yang merupakan pointer yang mereferensi pada alamat variable a. Sehingga ketika terjadi parubahan pada variable c, maka nilai variable a akan ikut berubah karena keduanya memiliki alamat memory yang sama.
+
+4. Variable b merupakan hasil penjumlahan dari nilai variabel b yang lama dengan nilai variable c. Variable b lama bernilai 5, sedangkan variable c merupakan pointer yang mereferensi pada alamat a. Nilai pada alamat itu adalah 5. Sehingga nilai *c otomatis akan sama yaitu 5.
+b = b + *c
+b = 5 + 5
+b = 10
+
+
+

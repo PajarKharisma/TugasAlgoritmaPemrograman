@@ -1,0 +1,4 @@
+1. Terjadi compile error karena kita meng-assign nilai ke arr_c, namun tidak dijelaskan pada index keberapa. Untuk mengatasi masalah ini, kita perlu menentukan index arr_c yang akan diberikan nilai.
+Source dapat dimodifikasi menjadi arr_c[0] = A.
+
+2. Array C hanya dideklarasikan sebanyak 5. Artinya arr_c hanya memiliki index sampai 4. Namun dalam program tersebut, arr_c pada index ke-5 (arr_c[5]) diberikan nilai dan tidak terjadi error. Hal ini karena dalam bahasa C, ketika kita memesan sebuah array, compiler secara otomatis akan memberikan memory sedikit lebih banyak dari yang kita pesan. Misalnya kita memesan sebuah array sebanyak 5, maka compiler akan menyiapkan memory sekitar 8. Sehingga kita masih bisa mengakses index array melebihi dari yang kita pesan.

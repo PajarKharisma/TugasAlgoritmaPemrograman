@@ -1,0 +1,26 @@
+Output Program : 
+
+A : 0
+a : 32764
+B : 0
+b : 0
+
+X : 
+x : �
+Y : 
+y : 
+
+C : 3
+D : 32
+
+1. Variable A dan a tidak sama karena kedua variable itu belum diberi nilai sehingga akan menampilkan nilai random default tergantung compiler yang digunakan. Namun tetap ada kemungkinan variable A dan a sama.
+
+2. Dalam program ini, variable B dan b sama. Variable B hanya dideklarasikan tanpa diisi nilai, sementara variable b dideklarasi dan diisi nilainya. Varible B akan menampilkan angka random dalam range tipe data int. Sementara variable b pasti akan menampilkan angka 0.
+
+3. Variable X dan x tidak sama. Karena kedua varible ini hanya dideklarasikan tanpa diisi nilainya. Sehingga akan menampilkan data random default tergantung jenis compilernya.
+
+4. Dalam program ini variable Y sama dengan y. Varible Y hanya dideklarasikan tanpa diisi nilainya. Sehingga akan menampilkan data random default tergantung jenis compilernya. Sementara variable y diisi oleh nilai '\0'. Akan tetapi dalam C karakter '\' merupakan karakter penanda sehingga karakter setelahnya tidak ditampilkan sehingga variable y tetap menampilkan kosong.
+
+5. Nilai C didapat dari hasil pencabangan dari nilai A dan B yang didapat dari operasi sebelumnya. Jika nilai A lebih besar atau sama dengan B, maka C akan diisi oleh nilai A, jika tidak akan diisi nilai B.
+
+6. Nilai D didapat dari operasi penjumlahan nilai B dengan 5, serta operasi bitwise atau pergeseran bit sebanyak 2 bit ke kiri.

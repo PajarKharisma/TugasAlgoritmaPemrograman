@@ -1,0 +1,15 @@
+1. Program tersebut adalah program yang akan mencetak bilangan secara berulang dimulai dari input yang dimasukan user dan akan terus berulang hingga angka terdekat yang lebih dari 10 dengan urutan berkurang 2.
+Contoh : 
+Masukkan sembarang bilangan positif : 20
+Nilai x sekarang:20
+Nilai x sekarang:18
+Nilai x sekarang:16
+Nilai x sekarang:14
+Nilai x sekarang:12
+
+2. Program pertama adalah while. Pertama program akan melakukan pengecekan terhadap input yang dimasukan oleh user. Jika input yang dimasukan memenuhi kondisi (lebih dari 10), maka statement akan dijalankan. Jika kondisi tidak terpenuhi, statement tidak akan dijalankan. Begitu seterusnya secara berulang. Pertama akan memeriksa kondisi, jika kondisi masih terpenuhi maka perulangan akan dilanjutkan. Perulangan akan berhenti jika kondisi tidak lagi terpenuhi.
+
+3. Program kedua adalah do. Pertama program akan langsung menjalankan statement tanpa memeriksa input yang dimasukan oleh user memenuhi kondisi atau tidak. Setelah menjalankan statement barulah program akan memeriksa kondisi, jika kondisi masih terpenuhi maka perulangan akan dilanjutkan dengan menjalankan statement terlebih dahulu baru memerika kondisi.
+
+4. Misal kita memasukan inputan angka 5. Program 1 tidak akan menampilkan apapun karena angka 5 tidak memenuhi kondisi. Sedangkan program 2 akan menampilkan angka 5 kemudian program selesai. Karena setelah menampilkan angka 5, program 2 baru memeriksa apakah angka 5 memenuhi kondisi atau tidak. Setelah diperiksa dan angka 5 tidak memenuhi kondisi maka perulangan dihentikan.
+

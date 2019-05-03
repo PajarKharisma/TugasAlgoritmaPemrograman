@@ -1,0 +1,16 @@
+Berikut output dari program tersebut :
+
+bool      : 1
+char      : 1
+int       : 4
+float     : 4
+double    : 8
+wchar_t   : 4
+
+Dari hasil output dapat disimpulkan bahwa bool dan char memiliki ukuran memory paling kecil yaitu hanya 1 byte. Karena boolean hanya menyimpan 1 nilai antara true atau false. Sementara tipe data Char hanya menyimpan karakter.
+
+int dan float memiliki ukuran memory sama yaitu 4 byte. Int hanya mampu menampung bilangan bulat pada rentang -2,147,483,648 hingga 2,147,483,647. Sementara float mampu menampung bilangan desimal hingga 6 angka desimal. Oleh karena itu 2 tipe data ini memiliki memory lebih besar dibanding tipe data bool dan char.
+
+Tipe data dengan memory paling besar adalah double karena mampu menampung hingga 15 angka desimal atau lebih dari 2 ukuran yang mampu ditampung oleh float.
+
+Terakhir yaitu wchar_t. Wchar atau wide character merupakan tipe data untuk karakter sama char. Akan tetapi wchar_t diperuntukkan untuk karakter yang membutuhkan lebih banyak memory. Oleh karena itu wchar_t memiliki memory lebih besar.

@@ -1,0 +1,21 @@
+Kode #1
+Hasil output : 
+varA.varA : 100
+varB.varA : 200
+varX.varA : 300
+
+varA, varB, dan varX dinstansiasi dari struct yang sama yaitu struct tipeA. Meskiput varA dan varB langsung diinstansiasi di bawah struct tipeA sedangkan varX diinstansiasi di dalam fungsi main, namun ketiganya tetap sama. Sehingga ketiganya memiliki variable yang sama yaitu variabel varA, varB, dan varC. Pada soal, setiap variable varA pada masing - masing struct diberikan nilai :
+
+varA.varA = 100
+varB.varA = 200
+varX.varA = 300
+
+Ketika dicetak, maka program akan menampilkan nilai variable varA dari masing - masing struct sesuai dengan nilai yang diberikan.
+
+Kode#2
+Kita bisa mendeklarasikan sebuah variable baru bertipe sama dengan varX atau varY dengan menggunakan auto dan langsung memberikan nilai variable tersebut. Notasi : 
+auto nama_varibale = nilai_variable.
+Syntax : 
+auto varZ = varX.
+
+Dalam program tersebut varZ dideklarasikan dengan auto dan langsung diberikan nilai varX. Secara otomatis varZ akan mengikuti tipe varX yang merupakan struct. Sehingga varZ secara otomatis akan menjadi struct yang serupa dengan varX dan varY.

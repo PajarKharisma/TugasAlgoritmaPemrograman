@@ -1,0 +1,7 @@
+1. Secara umum program akan melakukan operasi berupa penjumlahan nilai a dengan nilai a+1. Hal itu akan terus berlanjut selama nilai a kurang dari 10. Jika nilai a lebih dari 10, fungsi hanya akan mengembalikan nilai 1.
+
+2. Dalam soal, nilai a diberikan 2. Sehingga program akan melakukan operasi penjumlahan nilai a dengan nilai a+1 selama nilai a masih kurang dari 10 (2+3+4+5+6+7+8+9). Dan terakhir program akan mencetak nilai C (hasil operasi).
+
+3. Program 1 tidak ada masalah karena operasi yang dilakukan adalah penjumlahan sehingga kondisi berhenti (a>10) bisa tercapai.
+
+4. Ketika fungsi diganti dengan script dibawahnya. Program akan selalu berjalan. Artinya fungsi rekursif akan terus dipanggil. Karena operasi yang dilakukan adalah pengurangan sehingga program tidak akan mencapai kondisi berhenti.

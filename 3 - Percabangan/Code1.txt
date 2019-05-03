@@ -1,0 +1,2 @@
+1. Program tidak menampilkan apapun karena nilai A lebih kecil dari B sehingga kondisi if tidak terpenuhi dan statement di dalam if tidak akan dijalankan.
+2. Program menampilkan tulisan "STATEMENT INI DIKERJAKAN". Karena nilai A lebih besar dari B sehingga kondisi if terpenuhi dan statement di dalam if dijalankan.

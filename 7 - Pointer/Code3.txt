@@ -1,0 +1,13 @@
+1. Ya sama. Karena ketika melakukan operasi pointer = array angka. Secara otomatis pointer akan diisi oleh alamat dari array angka pada index[0]. Sehingga ketika menjalankan script cout angka vs pointer, program akan menampilkan alamat array angka pada index[0] dan variable pointer yang sudah diisi dengan alamat angka[0]. Oleh karena itu hasilnya sama.
+
+2. Tidak sama. Karena operasi X membuat alamat dari pointer bergerak (increment) sedangkan ketika kita melakukan operasi cout<<angka, kita hanya mencetak alamat array angka pada index 0. Sehingga tidak terjadi perubahan. Sedangkan pointer yang awalnya diberi alamat alamat angka[0], namun karena operasi pointer++ maka pointer diassign alamat baru. Oleh karena itu ketika dicetak maka hasilnya berbeda.
+
+3. Nilai array angka setelah operasi cout B:
+angka ke-0:2
+angka ke-1:4
+angka ke-2:6
+angka ke-3:8
+angka ke-4:10
+
+Karena operasi *pointer = *pointer * 2; pada operasi X. Pointer merujuk pada alamat array angka. Sehingga ketika nilai pointer berubah, maka nilai array angka akan ikut berubah.
+

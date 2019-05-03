@@ -1,0 +1,20 @@
+1. Semakin besar nilai y, maka semakin sedikit fungsi rekursif akan dipanggil. Karena operasi yang berjalan pada fungsi cetak selanjutnya adalah hasil kurang dari nilai a dan nilai b (a-b) dimana nilai a diberikan dari variable x dan nilai b diberikan dari variable y. Fungsi akan mencapai kondisi berhenti mencapai kondis a=1. Sehingga semakin besar nilai b akan semakin cepat nilai a berkurang dan semakin cepat mencapai kondisi berhenti (a=1).
+
+2. Ada kondisi program akan terus berjalan jika kondisi berhenti (a=1) tidak tercapai. Seperti jika kita berikan nilai variable y=5. Program akan terus berjalan karena kondisi a=1 akan terlewati sehingga kondisi berhenti tidak akan pernah tercapai.
+Contoh : 
+a = 13
+b = 5
+
+rekursif 1 >> a: 13-5 = 8.
+rekursif 2 >> a: 8-5 = 3.
+rekursif 3 >> a: 3-5 = (-2) << karena nilai a dari 3 berubah jadi (-2) sehingga kondisi berhenti tidak pernah tercapai.
+
+3. Untuk mengatasi masalah ini, perlu sedikit dirubah isi cetak menjadi.
+
+void cetak(int a, int b){
+    cout << "Cacah : " << a << endl;
+    if(a>1)
+        cetak(a-b,b);
+}
+
+dengan merubah kondisi berhenti menjadi (a<1), maka kondisi berhenti akan selalu tercapai dan program akan konvergen.
