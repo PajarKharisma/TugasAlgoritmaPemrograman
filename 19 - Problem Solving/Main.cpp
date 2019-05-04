@@ -12,7 +12,7 @@ int main(){
         diffList.push_back(diff);
     }
     
-    int max = 0;
+    int max = diffList.at(0);
     for(int i=0; i<diffList.size(); i++){
         if(diffList.at(i) > max)
             max = diffList.at(i);
