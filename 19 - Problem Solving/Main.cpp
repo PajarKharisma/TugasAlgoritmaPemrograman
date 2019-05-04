@@ -13,9 +13,9 @@ int main(){
     }
     
     int max = 0;
-    for(auto i:diffList){
-        if(i > max)
-            max = i;
+    for(int i=0; i<diffList.size(); i++){
+        if(diffList.at(i) > max)
+            max = diffList.at(i);
     }
     cout << "Selisih maximal adalah : " << max;
     getch();
