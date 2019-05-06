@@ -7,90 +7,120 @@ struct Node{
     Node *next;
 };
 
-struct Stack{
-    Node *list;
-    
-    void init(){
-        list = NULL;
-    }
+struct Queue{
+    private:
+        Node *list;
 
-    Node *getList(){
-        return this->list;
-    }
-
-    void push(int data){
-        Node *newNode = new Node;
-        newNode->data = data;
-        newNode->next = this->list;
-        this->list = newNode;
-    }
-
-    int pop(){
-        Node *p = this->list;
-        int data = p->data;
-        this->list = p->next;
-        delete p;
-
-        return data;
-    }
-
-    bool isEmpty(){
-        if (this->list == NULL)
-            return true;
-        else
-            return false;
-    }
-
-    int getNumList(){
-        int count = 0;
-        Node *p = list;
-        while(p != NULL){
-            count++;
-            p = p->next;
+    public:
+        void init(){
+            this->list = NULL;
         }
-        return count;
-    }
 
-    void printStack(){
-        Node *p = list;
-        while(p != NULL){
-            cout << p->data << " ";
-            p = p->next;
+        Node *getList(){
+            return this->list;
         }
-    }
+
+        void enQueue(int data){
+            Node *newNode = new Node;
+            newNode->data = data;
+            newNode->next = NULL;
+            if(this->list == NULL){
+                this->list = newNode;
+            }else{
+                Node *t = this->list;
+                while (t->next != NULL){
+                    t = t->next;
+                }
+                t->next = newNode;
+            }
+        }
+
+        int deQueue(){
+            int data = this->list->data;
+            Node *delNode = this->list;
+            this->list = this->list->next;
+            delete delNode;
+            return data;
+        }
+
+        void printQueue(string title){
+            cout << endl << title;
+            Node *l = this->list;
+            while(l != NULL){
+                cout << l->data << " ";
+                l = l->next;
+            }
+        }
+
+        bool isEmpty(){
+            if(getList() == NULL)
+                return true;
+            else
+                return false;
+        }
+
+        int getNumList(){
+            int count = 0;
+            Node *p = list;
+            while(p != NULL){
+                count++;
+                p = p->next;
+            }
+            return count;
+        }
 };
 
 int main(){
-    Stack stack1, stack2;
+    Queue qPeserta1, qPeserta2, qFinalis;
     int finalis = 5;
-    stack1.init();
-    stack2.init();
+
+    qPeserta1.init();
+    qPeserta2.init();
+    qFinalis.init();
+
     int peserta[] = {367, 475, 389, 274, 485, 492, 263, 394, 476, 358, 482, 249, 377, 472, 453, 282, 375, 494, 286, 468};
     int n = sizeof(peserta)/sizeof(peserta[0]);
     for(int i=0; i<n; i++){
-        stack1.push(peserta[i]);
+        qPeserta1.enQueue(peserta[i]);
     }
 
+    qPeserta1.printQueue("Peserta awal : ");
+
+    while(qFinalis.getNumList() < finalis-1){
+        int peserta1 = qPeserta1.deQueue();
+        int peserta2 = qPeserta1.deQueue();
+        qFinalis.enQueue(max(peserta1, peserta2));
+    }
+
+    qFinalis.printQueue("4 Finalis awal : ");
+
     int turn = 1;
-    while ((stack1.getNumList() > 5) || (stack2.getNumList() > 5)){
+    while (qPeserta1.getNumList() > 1 || qPeserta2.getNumList() > 1){
         switch (turn){
         case 1:
-            while(!stack1.isEmpty()) {
-                int peserta1 = stack1.pop();
-                int peserta2 = stack1.pop();
-                stack2.push(max(peserta1, peserta2));
+            while(!qPeserta1.isEmpty()){
+                int peserta1 = (!qPeserta1.isEmpty()) ? qPeserta1.deQueue() : 0;
+                int peserta2 = (!qPeserta1.isEmpty()) ? qPeserta1.deQueue() : 0;
+                qPeserta2.enQueue(max(peserta1, peserta2));
             }
             turn = 2;
         break;
+        
         case 2:
-            while(!stack2.isEmpty()) {
-                int peserta1 = stack2.pop();
-                int peserta2 = stack2.pop();
-                stack1.push(max(peserta1, peserta2));
+            while(!qPeserta2.isEmpty()){
+                int peserta1 = (!qPeserta2.isEmpty()) ? qPeserta2.deQueue() : 0;
+                int peserta2 = (!qPeserta2.isEmpty()) ? qPeserta2.deQueue() : 0;
+                qPeserta1.enQueue(max(peserta1, peserta2));
             }
             turn = 1;
         break;
         }
     }
+    if(!qPeserta1.isEmpty()){
+        qFinalis.enQueue(qPeserta1.deQueue());
+    }else{
+        qFinalis.enQueue(qPeserta2.deQueue());
+    }
+    qFinalis.printQueue("5 Finalis akhir: ");
     getch();
 }
