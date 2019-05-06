@@ -5,6 +5,7 @@
 using namespace std;
 
 struct Hash {
+    //Fungsi mencari bilangan prima terbesar kurang dari parameter
     int getBigestPrime(int val){
         bool isPrime = false;
         int bigestPrime = -1;
@@ -24,6 +25,7 @@ struct Hash {
         return bigestPrime;
     }
 
+    //fungsi menjumlahkan nilai ascii string
     int getStringValue(string s){
         char c[s.size()+1];
         strcpy(c, s.c_str());
@@ -34,6 +36,7 @@ struct Hash {
         return sum;
     }
 
+    //fungsi hashing dengan linear probing
     void hashing(string data, string kamus[]){
         int p = getBigestPrime(100);
         int val = getStringValue(data);
@@ -51,10 +54,13 @@ int main(){
     string kamus[100];
     string data[] = {"hari", "senin", "belajar", "giat", "agar", "kelak", "baik", "hasil", "tidak", "ada", "sesal", "dan", "besok", "tetap", "semangat", "kerja", "juang", "demi", "masa", "depan", "lebih", "cerah"};
     int n = sizeof(data)/sizeof(data[0]);
+
+    //memasukan data ke dalam index kamus
     for(int i=0; i<n; i++){
         hash.hashing(data[i], kamus);
     }
 
+    //mencetak isi kamus dan indexnya
     for(int i=0; i<100; i++){
         if(kamus[i] != "")
             cout << i << "-" << kamus[i] << endl;
