@@ -60,7 +60,7 @@ int main(){
         hash.hashing(data[i], kamus);
     }
 
-    //mencetak isi kamus dan indexnya
+    //mencetak isi kamus dan letaknya pada index berapa
     for(int i=0; i<100; i++){
         if(kamus[i] != "")
             cout << i << "-" << kamus[i] << endl;

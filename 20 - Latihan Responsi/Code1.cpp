@@ -38,7 +38,7 @@ struct Queue{
             }
         }
 
-        //method mengeluarkan data dari queue
+        //method mengambil data dari queue. Data yang sudah diambil otomatis akan dihapus
         int deQueue(){
             int data = this->list->data;
             Node *delNode = this->list;
