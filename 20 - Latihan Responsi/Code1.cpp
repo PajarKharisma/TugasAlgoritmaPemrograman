@@ -107,9 +107,9 @@ int main(){
 
     qFinalis.printQueue("4 Finalis awal : ");
 
-    //mencari 1 finalis tersisa dengan cara mencari nilai tertinggi 2 peserta sisanya secara berurutan.
+    //Mencari 1 finalis tersisa dengan cara mencari nilai tertinggi 2 peserta sisanya secara berurutan.
     //Kemudian pemenangnya akan diadu lagi hingga didapatkan nilai tertinggi
-    //proses ini menggunakan 2 queue. Semua pemenang dari qPeserta1 akan dimasukan dalam qPeserta2.
+    //Proses ini menggunakan 2 queue. Semua pemenang dari qPeserta1 akan dimasukan dalam qPeserta2.
     //Setelah itu, semua pemenang dari qPeserta2 akan dimasukan dalam qPeserta1 hingga akhirnya didapatkan 1 pemenang.
     int turn = 1;
     while (qPeserta1.getNumList() > 1 || qPeserta2.getNumList() > 1){
