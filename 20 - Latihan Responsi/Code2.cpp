@@ -5,6 +5,12 @@
 using namespace std;
 
 struct Hash {
+    int collision;
+
+    void init(){
+        collision = 0;
+    }
+
     //Fungsi mencari bilangan prima terbesar kurang dari parameter
     int getBigestPrime(int val){
         bool isPrime = false;
@@ -36,6 +42,10 @@ struct Hash {
         return sum;
     }
 
+    int getCollision(){
+        return this->collision;
+    }
+
     //fungsi hashing dengan linear probing
     void hashing(string data, string kamus[]){
         int p = getBigestPrime(100);
@@ -43,6 +53,7 @@ struct Hash {
         int index = val % p;
         while(kamus[index] != ""){
             index++;
+            collision++;
         }
         kamus[index] = data;
     }
@@ -51,6 +62,7 @@ struct Hash {
 
 int main(){
     Hash hash;
+    hash.init();
     string kamus[100];
     string data[] = {"hari", "senin", "belajar", "giat", "agar", "kelak", "baik", "hasil", "tidak", "ada", "sesal", "dan", "besok", "tetap", "semangat", "kerja", "juang", "demi", "masa", "depan", "lebih", "cerah"};
     int n = sizeof(data)/sizeof(data[0]);
@@ -59,6 +71,8 @@ int main(){
     for(int i=0; i<n; i++){
         hash.hashing(data[i], kamus);
     }
+
+    cout << "Jumlah data tabrakan : " << hash.getCollision() << endl;
 
     //mencetak isi kamus dan letaknya pada index berapa
     for(int i=0; i<100; i++){
