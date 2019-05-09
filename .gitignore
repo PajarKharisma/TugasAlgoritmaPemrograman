@@ -1,1 +1,1 @@
-!*/*.cpp      #unignore .h header files in each directory
+!*/*.cpp
