@@ -19,6 +19,4 @@ int main(){
     }
     cout << "Selisih maximal adalah : " << max;
     getch();
-    return 0;
-    //add comment
 }
