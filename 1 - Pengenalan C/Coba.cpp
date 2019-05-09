@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 using namespace std;
 
 struct Segitiga{
@@ -29,5 +30,5 @@ int main(){
     segitiga.setSegitiga(alas, tinggi);
     cout << "Luas segitiga adalah : " << segitiga.getSegitiga() << endl;
 
-    return 0;
+    getch();
 }

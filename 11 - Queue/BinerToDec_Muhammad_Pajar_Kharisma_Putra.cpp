@@ -12,6 +12,7 @@ struct Node{
 struct Queue{
     private:
         Node *list;
+        Node *tail;
 
     public:
         void init(){
@@ -28,12 +29,10 @@ struct Queue{
             newNode->next = NULL;
             if(this->list == NULL){
                 this->list = newNode;
+                this->tail = newNode;
             }else{
-                Node *t = this->list;
-                while (t->next != NULL){
-                    t = t->next;
-                }
-                t->next = newNode;
+                this->tail->next = newNode;
+                this->tail = this->tail->next;
             }
         }
 
