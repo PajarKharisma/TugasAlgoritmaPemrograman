@@ -142,6 +142,6 @@ int main(){
     }
 
     //cetak daftar finalis
-    qFinalis.printQueue("5 Finalis akhir: ");
+    qFinalis.printQueue("5 Finalis akhir : ");
     getch();
 }
