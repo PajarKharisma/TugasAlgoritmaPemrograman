@@ -28,8 +28,6 @@ Node *insertData(Node *anode, int data){
     }else if(data > anode->data){
         anode->right = insertData(anode->right, data);
     }
-
-    return anode;
 }
 
 //FUNGSI MENCETAK DATA SECARA ASCENDING
@@ -42,6 +40,13 @@ void printInorder(Node *anode){
     }
 }
 
+Node *findMax(Node *anode){
+    if(anode->right != NULL){
+        return findMax(anode->right);
+    }
+    return anode;
+}
+
 int main() {
 	int arr[] = {25, 73, 41, 30, 58, 64, 98, 13, 87, 91, 17, 76, 28, 45, 56}; 
 	int n = sizeof(arr)/sizeof(arr[0]); 
@@ -51,6 +56,8 @@ int main() {
         tree = insertData(tree, arr[i]);
     }
     printInorder(tree);
+
+    cout << endl << "Max data : " << findMax(tree)->data;
 
 	getch(); 
 } 
