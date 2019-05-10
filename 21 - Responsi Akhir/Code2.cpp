@@ -71,7 +71,7 @@ string reverseWord(string word){
     }
 
     //INSTRUKSI POP DATA DALAM STACK KEMUDIAN MENYUSUNNYA DALAM VARIABLE RESULT
-    while(stack.getList() != NULL){
+    while(!stack.isEmpty()){
         result += stack.pop();
     }
     return result;
