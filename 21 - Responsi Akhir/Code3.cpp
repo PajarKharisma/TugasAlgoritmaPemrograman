@@ -1,6 +1,5 @@
 #include <iostream>
 #include <conio.h>
-#include <queue>
 using namespace std; 
 
 //STRUKTUR NODE
